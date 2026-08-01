@@ -1,0 +1,13 @@
+__pycache__/
+*.egg-info/
+dist/
+build/
+.venv/
+.env
+.env.*
+coverage/
+.pytest_cache/
+.mypy_cache/
+.DS_Store
+AGENTS.md
+CLAUDE.md
