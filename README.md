@@ -6,6 +6,8 @@ Generate Markdown changelogs from **Git** tag history and commit message convent
 ![Status](https://img.shields.io/badge/status-stable-green)
 ![CLI](https://img.shields.io/badge/cli-changelog-green)
 
+Source: https://github.com/ethancarter-ai/cldgen
+
 ## About
 
 `cldgen` inspects a git repository, walks commit messages, and emits a compact Markdown changelog grouped by release tags. It supports conventional commits, custom group headings, JSON output for automation, and `--since` filtering from an existing tag.
