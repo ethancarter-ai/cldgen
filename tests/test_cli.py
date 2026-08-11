@@ -13,6 +13,8 @@ from pathlib import Path
 
 from cldgen.cli import main
 
+REPO_ROOT = Path(__file__).resolve().parent.parent
+
 
 def test_cli_help_success():
     rc = main(["--help"])
@@ -24,26 +26,22 @@ def test_cli_missing_command_returns_nonzero():
 
 
 def test_cli_generate_markdown_for_local_repo():
-    repo = Path("/root/WeeklyProjects/Week-26/cldgen")
-    rc = main(["generate", str(repo), "--format", "md", "--limit", "10"])
+    rc = main(["generate", str(REPO_ROOT), "--format", "md", "--limit", "10"])
     assert rc == 0
 
 
 def test_cli_generate_json_for_local_repo():
-    repo = Path("/root/WeeklyProjects/Week-26/cldgen")
-    rc = main(["generate", str(repo), "--format", "json"])
+    rc = main(["generate", str(REPO_ROOT), "--format", "json"])
     assert rc == 0
 
 
 def test_cli_generate_since_unknown_tag_empty():
-    repo = Path("/root/WeeklyProjects/Week-26/cldgen")
-    rc = main(["generate", str(repo), "--since", "not-a-tag", "--format", "md"])
+    rc = main(["generate", str(REPO_ROOT), "--since", "not-a-tag", "--format", "md"])
     assert rc == 0
 
 
 def test_cli_generate_group_flag():
-    repo = Path("/root/WeeklyProjects/Week-26/cldgen")
-    rc = main(["generate", str(repo), "--group", "Release-Test-1", "--format", "md", "--limit", "1"])
+    rc = main(["generate", str(REPO_ROOT), "--group", "Release-Test-1", "--format", "md", "--limit", "1"])
     assert rc == 0
 
 
@@ -52,6 +50,5 @@ def test_cli_generate_missing_repo_returns_nonzero():
 
 
 def test_cli_json_alias_flag():
-    repo = Path("/root/WeeklyProjects/Week-26/cldgen")
-    rc = main(["generate", str(repo), "--json"])
+    rc = main(["generate", str(REPO_ROOT), "--json"])
     assert rc == 0
