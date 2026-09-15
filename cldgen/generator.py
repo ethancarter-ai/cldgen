@@ -91,7 +91,7 @@ class ChangelogGenerator:
             commit.date,
             commit.author,
             commit.message,
-            commit.message,
+            commit.message.strip(),
         ])
 
 
