@@ -52,7 +52,7 @@ def _resolve_format(args: argparse.Namespace) -> str:
 
 def main(argv: list[str] | None = None) -> int:
     if argv is None:
-        argv = []
+        argv = sys.argv[1:]
     parser = _build_parser()
     if not argv:
         parser.print_help()
