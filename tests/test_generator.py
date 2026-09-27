@@ -3,9 +3,8 @@
 from __future__ import annotations
 
 from pathlib import Path
-from tempfile import TemporaryDirectory
 
-import pytest
+import pytest  # noqa: F401
 
 from cldgen.generator import ChangelogGenerator
 from cldgen.types import Commit, GroupHeader, ChangelogEntry

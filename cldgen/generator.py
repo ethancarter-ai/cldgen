@@ -14,10 +14,9 @@ from cldgen.parser import (
     MarkdownRenderer,
     parse_tags,
     parse_git_log,
-    render_changelog,
 )
 from cldgen.types import GroupHeader as TypesGroupHeader
-from cldgen.git import collect_commits, collect_tags, GitError, GitTagInfo
+from cldgen.git import collect_commits, collect_tags
 
 
 class ChangelogGenerator:

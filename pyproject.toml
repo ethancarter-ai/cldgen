@@ -12,6 +12,9 @@ license = { text = "MIT" }
 keywords = ["changelog", "git", "cli", "developer-tools"]
 classifiers = [
     "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
     "License :: OSI Approved :: MIT",
     "Operating System :: OS Independent",
     "Topic :: Software Development :: Documentation",

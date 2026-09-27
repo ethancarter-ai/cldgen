@@ -3,13 +3,11 @@
 from __future__ import annotations
 
 from datetime import datetime
-from unittest.mock import patch
 
 import pytest
 
 from cldgen.parser import (
     MarkdownRenderer,
-    group_commits,
     normalize_type,
     parse_git_log,
     parse_tags,
