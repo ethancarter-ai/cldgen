@@ -51,26 +51,28 @@ cldgen generate /path/to/repo --group "Release-2025-09-01"
 ## Project Structure
 
 ```text
+.github/
+  workflows/tests.yml
 cldgen/
-  cldgen/
-    __init__.py
-    cli.py
-    generator.py
-    git.py
-    parser.py
-    types.py
-  tests/
-    __init__.py
-    test_parser.py
-    test_generator.py
-    test_cli.py
-  docs/
-    usage.md
-  pyproject.toml
-  README.md
-  .gitignore
+  __init__.py
+  __main__.py
+  cli.py
+  generator.py
+  git.py
+  parser.py
+  types.py
+docs/
+  usage.md
+tests/
+  test_cli.py
+  test_generator.py
+  test_parser.py
+.gitignore
+LICENSE
+README.md
+pyproject.toml
 ```
 
 ## Tags
 
-`python`, `cli`, `changelog`, `git`, `developer-tools`, `conventional-commits`
+`changelog`, `cli`, `conventional-commits`, `developer-tools`, `git`, `markdown`, `python`
